@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Account Dukan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>
+    // اگر یوزر پہلے سے لاگ ان ہے تو فوراً ہوم پیج پر بھیج دیں
+    const activeUser = JSON.parse(localStorage.getItem('account_dukan_current_user'));
+    if (activeUser) {
+      window.location.replace('index.html');
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: #0b1526; color: #fff; min-height: 100vh; display: flex; flex-direction: column; }
+    
+    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 16px 40px; background: rgba(11, 21, 38, 0.95); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+    .brand { font-size: 20px; font-weight: 700; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .brand span { color: #f59e0b; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a { color: #cbd5e1; text-decoration: none; font-size: 14px; }
+    .nav-btn { background: #000; color: #fff; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 600; border: 1px solid #334155; }
+
+    .auth-container { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+    .auth-card { background: #132238; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; width: 100%; max-width: 420px; padding: 36px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
+    .card-header { text-align: center; margin-bottom: 24px; }
+    .card-header .crown { font-size: 32px; margin-bottom: 8px; display: inline-block; }
+    .card-header h1 { font-size: 22px; font-weight: 700; }
+    .card-header p { font-size: 13px; color: #94a3b8; margin-top: 4px; }
+
+    .alert { padding: 10px 14px; border-radius: 8px; font-size: 13px; margin-bottom: 16px; display: none; }
+    .alert-error { background: rgba(239, 68, 68, 0.15); border: 1px solid #ef4444; color: #fca5a5; }
+    .alert-success { background: rgba(34, 197, 94, 0.15); border: 1px solid #22c55e; color: #86efac; }
+
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; color: #e2e8f0; }
+    .input-wrapper { position: relative; }
+    .input-wrapper i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #64748b; font-size: 14px; }
+    .input-wrapper input { width: 100%; padding: 12px 14px 12px 40px; background: #0b1526; border: 1px solid #24354d; border-radius: 8px; color: #fff; font-size: 14px; outline: none; }
+    .input-wrapper input:focus { border-color: #3b82f6; }
+    
+    .form-options { display: flex; justify-content: space-between; align-items: center; font-size: 12px; margin-bottom: 20px; }
+    .form-options label { display: flex; align-items: center; gap: 6px; color: #94a3b8; cursor: pointer; }
+    .form-options a { color: #60a5fa; text-decoration: none; }
+
+    .submit-btn { width: 100%; padding: 12px; background: #2563eb; color: #fff; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; }
+    .submit-btn:hover { background: #1d4ed8; }
+
+    .card-footer { text-align: center; margin-top: 22px; font-size: 13px; color: #94a3b8; }
+    .card-footer a { color: #60a5fa; text-decoration: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="brand">👑 <span>ACCOUNT</span> DUKAN</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="signup.html" class="nav-btn">Sign Up</a>
+    </div>
+  </nav>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="card-header">
+        <div class="crown">👑</div>
+        <h1>ACCOUNT DUKAN</h1>
+        <p>Login to your account</p>
+      </div>
+
+      <div id="alertBox" class="alert"></div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label>Email Address</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="email" placeholder="example@gmail.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" placeholder="Enter password" required />
+          </div>
+        </div>
+
+        <div class="form-options">
+          <label><input type="checkbox" id="remember" checked /> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+
+      <div class="card-footer">
+        Don't have an account? <a href="signup.html">Sign Up here</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const alertBox = document.getElementById('alertBox');
+
+    function showAlert(msg, isSuccess = false) {
+      alertBox.textContent = msg;
+      alertBox.className = 'alert ' + (isSuccess ? 'alert-success' : 'alert-error');
+      alertBox.style.display = 'block';
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value.trim().toLowerCase();
+      const password = document.getElementById('password').value;
+
+      const users = JSON.parse(localStorage.getItem('account_dukan_users')) || [];
+      const user = users.find(u => u.email === email && u.password === password);
+
+      if (!user) {
+        showAlert('Invalid email or password! Please check and try again.');
+        return;
+      }
+
+      // لاگ ان سیشن سیو کریں
+      localStorage.setItem('account_dukan_current_user', JSON.stringify(user));
+
+      showAlert(`Welcome ${user.name}! Logging you in…..`, true);
+
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>

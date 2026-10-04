@@ -1,0 +1,802 @@
+/* =======================================================
+   AccountDukan — theme stylesheet
+   ======================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --ink: #14161f;
+    --ink-soft: #2b2e3d;
+    --paper: #ffffff;
+    --paper-soft: #f8f6f1;
+    --gold: #c9973e;
+    --gold-deep: #9c7529;
+    --gold-pale: #f3e6c9;
+    --muted: #6b7280;
+    --line: #e8e3d6;
+    --success: #1f9d55;
+
+    --font-display: 'Fraunces', serif;
+    --font-body: 'Manrope', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--ink);
+    letter-spacing: -0.01em;
+}
+
+a {
+    text-decoration: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--gold-deep);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+/* =======================================================
+   Navbar
+   ======================================================= */
+
+.premium-navbar {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.account-logo {
+    height: 40px;
+    width: auto;
+}
+
+.premium-navbar .nav-link {
+    font-weight: 600;
+    color: var(--ink-soft);
+    padding: 0.5rem 0.9rem !important;
+    position: relative;
+}
+
+.premium-navbar .nav-link.active,
+.premium-navbar .nav-link:hover {
+    color: var(--gold-deep);
+}
+
+.premium-navbar .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0.9rem;
+    right: 0.9rem;
+    bottom: -2px;
+    height: 2px;
+    background: var(--gold);
+}
+
+.login-btn {
+    font-weight: 600;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    padding: 0.45rem 1.1rem;
+    border-radius: 6px;
+}
+
+.login-btn:hover {
+    border-color: var(--gold-deep);
+    color: var(--gold-deep);
+}
+
+.signup-btn {
+    font-weight: 600;
+    color: #fff;
+    background: var(--ink);
+    padding: 0.45rem 1.2rem;
+    border-radius: 6px;
+    border: 1px solid var(--ink);
+}
+
+.signup-btn:hover {
+    background: var(--gold-deep);
+    border-color: var(--gold-deep);
+    color: #fff;
+}
+
+/* =======================================================
+   Hero / Carousel
+   ======================================================= */
+
+#carouselExampleCaptions {
+    position: relative;
+}
+
+#carouselExampleCaptions::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20, 22, 31, 0.55) 0%, rgba(20, 22, 31, 0.78) 100%);
+}
+
+.carousel-caption.top-caption {
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    width: min(680px, 90%);
+}
+
+.carousel-caption.top-caption h1 {
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.4rem;
+}
+
+.carousel-caption.top-caption h2 {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 700;
+    color: var(--gold-pale);
+    margin-bottom: 1rem;
+}
+
+.carousel-caption.top-caption p {
+    color: #e7e5df;
+    margin-bottom: 0.35rem;
+}
+
+.trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+}
+
+.trust-badges span {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+}
+
+/* =======================================================
+   Why choose us
+   ======================================================= */
+
+.why-choose-section {
+    background: var(--paper-soft);
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.feature-btn {
+    border-color: var(--line) !important;
+    color: var(--ink) !important;
+    font-weight: 600;
+    padding: 0.55rem 1.1rem;
+    border-radius: 999px;
+    background: #fff !important;
+}
+
+.feature-btn:hover {
+    border-color: var(--gold-deep) !important;
+    background: var(--gold-pale) !important;
+    color: var(--ink) !important;
+}
+
+/* =======================================================
+   Section heading (shared)
+   ======================================================= */
+
+.section-heading h2 {
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.section-label {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: var(--gold-deep);
+    letter-spacing: 0.06em;
+}
+
+/* =======================================================
+   Packages
+   ======================================================= */
+
+.package-card {
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--gold);
+    border-radius: 10px;
+    background: #fff;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.package-card:hover {
+    border-color: var(--gold-deep);
+    transform: translateY(-3px);
+}
+
+.package-card h3 {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.package-card h3 i,
+.package-card h3 .brand-sticker {
+    color: var(--gold-deep);
+    font-size: 1.1rem;
+}
+
+.package-card h3 .facebook-icon {
+    color: #1877f2;
+}
+
+.package-card hr {
+    border-top: 1px solid var(--line);
+    opacity: 1;
+}
+
+.package-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+    color: var(--ink-soft);
+}
+
+.package-card ul li {
+    padding: 0.25rem 0 0.25rem 1.4rem;
+    position: relative;
+}
+
+.package-card ul li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: var(--gold-deep);
+    font-weight: 700;
+}
+
+.package-card .price {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--ink);
+}
+
+.package-card .price strong {
+    color: var(--gold-deep);
+}
+
+.package-card .btn-primary {
+    background: var(--ink);
+    border-color: var(--ink);
+    font-weight: 600;
+}
+
+.package-card .btn-primary:hover {
+    background: var(--gold-deep);
+    border-color: var(--gold-deep);
+}
+
+/* =======================================================
+   Supported platforms
+   ======================================================= */
+
+.supported-platforms {
+    background: var(--paper-soft);
+}
+
+.platform-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    height: 100%;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.platform-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--gold-deep);
+}
+
+.platform-card i {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+    display: inline-block;
+}
+
+.platform-card h5 {
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+}
+
+.platform-card p {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+.instagram-icon { color: #c8348b; }
+.facebook-icon { color: #1877f2; }
+.linkedin-icon { color: #0a66c2; }
+.threads-icon { color: #14161f; }
+.telegram-icon { color: #26a5e4; }
+
+/* =======================================================
+   Testimonials
+   ======================================================= */
+
+.testimonial-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.75rem;
+}
+
+.stars {
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.75rem;
+}
+
+.review {
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.client-info img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.client-info h6 {
+    margin-bottom: 0.1rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+
+.client-info .verified {
+    color: var(--success);
+}
+
+.client-info small {
+    color: var(--muted);
+}
+
+/* =======================================================
+   Contact section
+   ======================================================= */
+
+.contact-card {
+    background: var(--paper-soft);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    height: 100%;
+}
+
+.contact-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.contact-icon.whatsapp { background: #25d366; }
+.contact-icon.chatbot { background: var(--ink); }
+.contact-icon.email { background: var(--gold-deep); }
+
+.contact-card p {
+    color: var(--muted);
+    min-height: 3.2rem;
+}
+
+.floating-whatsapp {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    z-index: 1050;
+    transition: transform 0.2s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.08);
+    color: #fff;
+}
+
+/* =======================================================
+   AI Chatbot widget
+   ======================================================= */
+
+.ai-chatbot {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 6rem;
+    width: min(360px, calc(100vw - 2rem));
+    max-height: min(520px, calc(100vh - 8rem));
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 20px 45px rgba(20, 22, 31, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1060;
+
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.ai-chatbot.open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.ai-chatbot-header {
+    background: var(--ink);
+    color: #fff;
+    padding: 0.9rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ai-chatbot-title {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.ai-chatbot-title i {
+    background: var(--gold);
+    color: var(--ink);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai-chatbot-title h6 {
+    color: #fff;
+    margin: 0;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+
+.ai-chatbot-title span {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.ai-chatbot-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0.25rem;
+}
+
+.ai-chatbot-close:hover {
+    opacity: 1;
+}
+
+.ai-chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    background: var(--paper-soft);
+    min-height: 220px;
+}
+
+.ai-msg {
+    max-width: 85%;
+    padding: 0.55rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+.ai-msg.bot {
+    background: #fff;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    align-self: flex-start;
+    border-bottom-left-radius: 3px;
+}
+
+.ai-msg.user {
+    background: var(--ink);
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 3px;
+}
+
+.ai-chatbot-quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0.6rem 0.8rem;
+    border-top: 1px solid var(--line);
+    background: #fff;
+}
+
+.ai-chatbot-quick-replies button {
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--ink-soft);
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+}
+
+.ai-chatbot-quick-replies button:hover {
+    border-color: var(--gold-deep);
+    color: var(--gold-deep);
+}
+
+.ai-chatbot-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 0.8rem;
+    border-top: 1px solid var(--line);
+    background: #fff;
+}
+
+.ai-chatbot-input input {
+    flex: 1;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-size: 0.88rem;
+    font-family: var(--font-body);
+}
+
+.ai-chatbot-input input:focus {
+    outline: none;
+    border-color: var(--gold-deep);
+}
+
+.ai-chatbot-input button {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: none;
+    background: var(--gold);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai-chatbot-input button:hover {
+    background: var(--gold-deep);
+    color: #fff;
+}
+
+@media (max-width: 420px) {
+    .ai-chatbot {
+        right: 0.6rem;
+        left: 0.6rem;
+        width: auto;
+        bottom: 5.5rem;
+    }
+}
+
+/* =======================================================
+   Footer
+   ======================================================= */
+
+.account-footer {
+    background: var(--ink);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 3.5rem 0 0;
+}
+
+.footer-logo {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 0.9rem;
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    max-width: 320px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.footer-socials a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-socials a:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+}
+
+.footer-title {
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 1.1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-contact-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.1rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.88rem;
+}
+
+.footer-contact-btn:hover {
+    background: var(--gold);
+    color: var(--ink);
+}
+
+.footer-bottom {
+    margin-top: 2.5rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 1.1rem;
+}
+
+.footer-bottom-links a {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-bottom-links a:hover {
+    color: var(--gold);
+}
+
+body { 
+  background-color: #f8f6f1; 
+  color: #14161f; 
+}
+.navbar { 
+  background: #ffffff !important; 
+  border-bottom: 1px solid #e8e3d6; 
+}
+.brand { 
+  color: #14161f !important; 
+}
+.nav-links a { 
+  color: #4b5563 !important; 
+}
+.auth-card { 
+  background: #ffffff !important; 
+  border: 1px solid #e8e3d6 !important; 
+  color: #14161f !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+.card-header h1 { 
+  color: #14161f !important; 
+}
+.form-group label { 
+  color: #374151 !important; 
+}
+.form-input { 
+  background: #ffffff !important; 
+  border: 1px solid #d1d5db !important; 
+  color: #14161f !important; 
+}

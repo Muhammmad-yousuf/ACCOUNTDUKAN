@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Verified Gmail Accounts | AccountDukan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+   :root {
+  --bg-dark: #f8f6f1;           /* index.html ka soft paper background */
+  --bg-card: #ffffff;           /* Cards ka white background */
+  --bg-card-hover: #f3efe6;     /* Hover par halka golden/paper effect */
+  --primary-navy: #ffffff;      /* Navbar ka white background */
+  --accent-gold: #c9973e;       /* Gold branding */
+  --accent-blue: #2563eb;       
+  --text-white: #14161f;        /* Text dark ink ho jayega */
+  --text-dim: #6b7280;          /* Secondary text gray */
+  --border-color: #e8e3d6;      /* index.html ki soft border */
+  --font-family: 'Manrope', 'Segoe UI', Roboto, sans-serif;
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--font-family);
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 6%;
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-white);
+    }
+
+    .brand-logo svg {
+      width: 38px;
+      height: 38px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+
+    .brand-name span {
+      color: var(--accent-gold);
+    }
+
+    .brand-tag {
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text-white);
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid var(--accent-red);
+      padding-bottom: 4px;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+    }
+
+    .btn-login {
+      background: transparent;
+      color: var(--text-white);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-login:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-signup {
+      background: linear-gradient(135deg, #ea4335, #c5221f);
+      color: #fff;
+    }
+
+    .btn-signup:hover {
+      box-shadow: 0 4px 14px rgba(234, 67, 53, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .user-greeting {
+      font-size: 0.9rem;
+      color: var(--accent-gold);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Hero */
+    .hero-section {
+      text-align: center;
+      padding: 50px 20px 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--badge-bg);
+      color: #ff8a80;
+      border: 1px solid rgba(234, 67, 53, 0.3);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .hero-title span {
+      color: var(--accent-red);
+    }
+
+    .hero-subtitle {
+      color: var(--text-dim);
+      font-size: 1.05rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* Trust Highlights */
+    .trust-strip {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.02);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+    }
+
+    .trust-item i {
+      color: var(--accent-gold);
+      font-size: 1.1rem;
+    }
+
+    /* Products Grid */
+    .products-container {
+      max-width: 1200px;
+      margin: 20px auto 60px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      width: 100%;
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(234, 67, 53, 0.4);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .product-card.featured {
+      border: 1.5px solid rgba(245, 158, 11, 0.6);
+      background: linear-gradient(180deg, #182338 0%, #151f32 100%);
+    }
+
+    .popular-tag {
+      position: absolute;
+      top: -11px;
+      right: 20px;
+      background: var(--accent-gold);
+      color: #000;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: rgba(234, 67, 53, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-red);
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .product-card.featured .icon-box {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent-gold);
+    }
+
+    .card-title h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 4px;
+    }
+
+    .card-title p {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+
+    .price-box {
+      margin: 14px 0 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .price-amount {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: var(--text-white);
+    }
+
+    .price-unit {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    .features-list {
+      list-style: none;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .features-list li {
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .features-list li i {
+      color: #22c55e;
+      font-size: 0.85rem;
+    }
+
+    .features-list li.security i {
+      color: var(--accent-blue);
+    }
+
+    .btn-buy {
+      width: 100%;
+      background: linear-gradient(135deg, #ea4335, #c5221f);
+      color: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    .btn-buy:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #111a2e;
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      max-width: 480px;
+      width: 100%;
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      background: none;
+      border: none;
+      color: var(--text-dim);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    .modal-close:hover {
+      color: #fff;
+    }
+
+    .modal-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .modal-item-name {
+      color: var(--accent-red);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      background: #0b1120;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: #fff;
+      font-size: 0.92rem;
+      outline: none;
+    }
+
+    .form-group input:focus {
+      border-color: var(--accent-red);
+    }
+
+    .qty-control {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .qty-btn {
+      width: 36px;
+      height: 36px;
+      background: #1e293b;
+      border: 1px solid var(--border-color);
+      color: #fff;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .qty-display {
+      font-weight: 700;
+      font-size: 1.1rem;
+      width: 40px;
+      text-align: center;
+    }
+
+    .modal-summary {
+      background: #0b1120;
+      padding: 12px;
+      border-radius: 8px;
+      margin: 18px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px dashed var(--border-color);
+    }
+
+    .modal-total {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+    }
+
+    .btn-submit-order {
+      width: 100%;
+      background: #25d366;
+      color: #0b1120;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-submit-order:hover {
+      background: #1eb956;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 24px;
+      background: #0a0f1d;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 16px;
+      }
+      .nav-links {
+        gap: 14px;
+        font-size: 0.85rem;
+      }
+      .hero-title {
+        font-size: 1.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <a href="index.html" class="brand-logo">
+      <!-- AccountDukan SVG Shield & Crown Logo -->
+      <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 3L6 9V20C6 29.5 12.8 38.3 22 41C31.2 38.3 38 29.5 38 20V9L22 3Z" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M14 24L17 15L22 19L27 15L30 24H14Z" fill="#f59e0b"/>
+        <circle cx="17" cy="14" r="1.5" fill="#ffffff"/>
+        <circle cx="22" cy="17.5" r="1.5" fill="#ffffff"/>
+        <circle cx="27" cy="14" r="1.5" fill="#ffffff"/>
+        <circle cx="22" cy="27" r="2.5" fill="#38bdf8"/>
+      </svg>
+      <div class="brand-text">
+        <span class="brand-name">ACCOUNT<span>DUKAN</span></span>
+        <span class="brand-tag">VERIFIED ACCOUNTS</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="instagram.html">Instagram</a></li>
+      <li><a href="gmail.html" class="active">Gmail</a></li>
+      <li><a href="index.html#threads">Threads</a></li>
+      <li><a href="index.html#facebook">Facebook</a></li>
+    </ul>
+
+    <div class="nav-actions" id="nav-actions-container">
+      <a href="login.html" class="btn btn-login">Login</a>
+      <a href="signup.html" class="btn btn-signup">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-badge">
+      <i class="fa-solid fa-envelope-circle-check"></i> 100% Phone Verified & Fresh/Aged
+    </div>
+    <h1 class="hero-title">Buy Real & Verified <span>Gmail</span> Accounts</h1>
+    <p class="hero-subtitle">
+      Full access credentials provided instantly. Each account includes Email, Password, Recovery Email, and optional 2-Factor Authentication keys.
+    </p>
+  </section>
+
+  <!-- Trust Strip -->
+  <div class="trust-strip">
+    <div class="trust-item"><i class="fa-solid fa-key"></i> Full Access (Email + Pass + Recovery)</div>
+    <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> 2FA / Backup Codes Ready</div>
+    <div class="trust-item"><i class="fa-solid fa-bolt"></i> Instant WhatsApp Delivery</div>
+    <div class="trust-item"><i class="fa-solid fa-rotate-left"></i> 24-Hour Replacement Warranty</div>
+  </div>
+
+  <!-- Products Grid (Credentials Only) -->
+  <main class="products-container">
+
+    <!-- Card 1: Fresh PVA Gmail -->
+    <div class="product-card">
+      <div>
+        <div class="card-header">
+          <div class="icon-box"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <div class="card-title">
+            <h3>Fresh PVA Gmail</h3>
+            <p>100% Unique Phone Verified</p>
+          </div>
+        </div>
+        <div class="price-box">
+          <span class="price-amount">Rs. 80</span>
+          <span class="price-unit">/ account</span>
+        </div>
+        <ul class="features-list">
+          <li><i class="fa-solid fa-check"></i> Gmail Address & Strong Password</li>
+          <li><i class="fa-solid fa-check"></i> Active Recovery Email included</li>
+          <li><i class="fa-solid fa-check"></i> Real SIM phone number verified</li>
+          <li class="security"><i class="fa-solid fa-shield"></i> Clean IP creation (No captcha issues)</li>
+          <li><i class="fa-solid fa-clock-rotate-left"></i> 24-Hour Replacement Guarantee</li>
+        </ul>
+      </div>
+      <button class="btn-buy" onclick="openOrderModal('Fresh PVA Gmail', 80)">
+        <i class="fa-brands fa-whatsapp"></i> Buy Now
+      </button>
+    </div>
+
+    <!-- Card 2: Aged Gmail (Featured) -->
+    <div class="product-card featured">
+      <span class="popular-tag">High Trust</span>
+      <div>
+        <div class="card-header">
+          <div class="icon-box"><i class="fa-solid fa-calendar-check"></i></div>
+          <div class="card-title">
+            <h3>Aged Gmail (2020 - 2023)</h3>
+            <p>1-4 Years Old High Reputation</p>
+          </div>
+        </div>
+        <div class="price-box">
+          <span class="price-amount">Rs. 250</span>
+          <span class="price-unit">/ account</span>
+        </div>
+        <ul class="features-list">
+          <li><i class="fa-solid fa-check"></i> Old creation date (High trust score)</li>
+          <li><i class="fa-solid fa-check"></i> Email + Password + Recovery Mail</li>
+          <li><i class="fa-solid fa-check"></i> Perfect for Google Ads, YouTube, Play Store</li>
+          <li class="security"><i class="fa-solid fa-lock"></i> Zero disable / zero phone-lock risk</li>
+          <li><i class="fa-solid fa-clock-rotate-left"></i> 48-Hour Replacement Guarantee</li>
+        </ul>
+      </div>
+      <button class="btn-buy" onclick="openOrderModal('Aged Gmail (2020-2023)', 250)">
+        <i class="fa-brands fa-whatsapp"></i> Buy Now
+      </button>
+    </div>
+
+    <!-- Card 3: Gmail with 2FA & App Passwords -->
+    <div class="product-card">
+      <div>
+        <div class="card-header">
+          <div class="icon-box"><i class="fa-solid fa-shield-virus"></i></div>
+          <div class="card-title">
+            <h3>Gmail + 2FA Secure</h3>
+            <p>2-Step Verification & Backup Codes</p>
+          </div>
+        </div>
+        <div class="price-box">
+          <span class="price-amount">Rs. 150</span>
+          <span class="price-unit">/ account</span>
+        </div>
+        <ul class="features-list">
+          <li><i class="fa-solid fa-check"></i> Email + Password provided</li>
+          <li><i class="fa-solid fa-check"></i> 10 Google Backup Codes supplied</li>
+          <li><i class="fa-solid fa-check"></i> 2FA Secret Key (Authenticator app ready)</li>
+          <li class="security"><i class="fa-solid fa-key"></i> SMTP & App Passwords enabled</li>
+          <li><i class="fa-solid fa-clock-rotate-left"></i> Full Login Guarantee</li>
+        </ul>
+      </div>
+      <button class="btn-buy" onclick="openOrderModal('Gmail + 2FA Secure', 150)">
+        <i class="fa-brands fa-whatsapp"></i> Buy Now
+      </button>
+    </div>
+
+    <!-- Card 4: Bulk Bundle (Pack of 10) -->
+    <div class="product-card">
+      <div>
+        <div class="card-header">
+          <div class="icon-box"><i class="fa-solid fa-boxes-stacked"></i></div>
+          <div class="card-title">
+            <h3>PVA Bulk Pack (10 Accounts)</h3>
+            <p>Discounted bundle for agencies & teams</p>
+          </div>
+        </div>
+        <div class="price-box">
+          <span class="price-amount">Rs. 700</span>
+          <span class="price-unit">/ 10 accounts</span>
+        </div>
+        <ul class="features-list">
+          <li><i class="fa-solid fa-check"></i> 10 Fresh Phone Verified Gmails</li>
+          <li><i class="fa-solid fa-check"></i> Clean Excel / Notepad sheet delivery</li>
+          <li><i class="fa-solid fa-check"></i> Email : Password : Recovery format</li>
+          <li class="security"><i class="fa-solid fa-percent"></i> Save Rs. 100 on pack</li>
+          <li><i class="fa-solid fa-clock-rotate-left"></i> Replacement for non-working lines</li>
+        </ul>
+      </div>
+      <button class="btn-buy" onclick="openOrderModal('PVA Bulk Pack (10 Accounts)', 700, 10)">
+        <i class="fa-brands fa-whatsapp"></i> Buy Now
+      </button>
+    </div>
+
+  </main>
+
+  <!-- Buy Now Modal -->
+  <div class="modal-backdrop" id="orderModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeOrderModal()">&times;</button>
+      <h3 class="modal-title">Confirm Order</h3>
+      <p class="modal-item-name" id="modalItemTitle">Fresh PVA Gmail</p>
+
+      <div class="form-group">
+        <label>Your Name:</label>
+        <input type="text" id="custName" placeholder="Enter your full name">
+      </div>
+
+      <div class="form-group">
+        <label>Quantity (Number of accounts/packs):</label>
+        <div class="qty-control">
+          <button class="qty-btn" type="button" onclick="changeQty(-1)">-</button>
+          <span class="qty-display" id="qtyDisplay">1</span>
+          <button class="qty-btn" type="button" onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Special Instructions / Format preference (Optional):</label>
+        <input type="text" id="custNote" placeholder="e.g. Need backup codes, send as text file">
+      </div>
+
+      <div class="modal-summary">
+        <span>Total Amount:</span>
+        <span class="modal-total" id="modalTotal">Rs. 80</span>
+      </div>
+
+      <button class="btn-submit-order" onclick="submitToWhatsApp()">
+        <i class="fa-brands fa-whatsapp"></i> Order & Get Credentials on WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 AccountDukan. All rights reserved. Instant delivery & verified credentials.</p>
+  </footer>
+
+  <script>
+    // Global state for ordering
+    let currentItem = { name: '', unitPrice: 0, defaultPackSize: 1 };
+    let currentQty = 1;
+
+    // Open Modal
+    function openOrderModal(itemName, unitPrice, packSize = 1) {
+      currentItem = { name: itemName, unitPrice: unitPrice, defaultPackSize: packSize };
+      currentQty = 1;
+
+      document.getElementById('modalItemTitle').innerText = itemName;
+      document.getElementById('qtyDisplay').innerText = currentQty;
+      updateTotal();
+
+      // Autofill logged in user name if available
+      try {
+        const stored = localStorage.getItem('account_dukan_current_user');
+        if (stored) {
+          const u = JSON.parse(stored);
+          if (u.name) document.getElementById('custName').value = u.name;
+        }
+      } catch (e) {}
+
+      document.getElementById('orderModal').classList.add('open');
+    }
+
+    // Close Modal
+    function closeOrderModal() {
+      document.getElementById('orderModal').classList.remove('open');
+    }
+
+    // Quantity update
+    function changeQty(delta) {
+      currentQty = Math.max(1, currentQty + delta);
+      document.getElementById('qtyDisplay').innerText = currentQty;
+      updateTotal();
+    }
+
+    function updateTotal() {
+      const total = currentQty * currentItem.unitPrice;
+      document.getElementById('modalTotal').innerText = 'Rs. ' + total;
+    }
+
+    // Redirect to WhatsApp with complete order text
+    function submitToWhatsApp() {
+      const name = document.getElementById('custName').value.trim() || 'Valued Customer';
+      const note = document.getElementById('custNote').value.trim();
+      const total = currentQty * currentItem.unitPrice;
+
+      const whatsappNumber = '923001234567'; // <-- Yahan apna WhatsApp number daalein
+
+      let msg = `*NEW GMAIL ORDER - ACCOUNTDUKAN*\n`;
+      msg += `------------------------------\n`;
+      msg += `*Package:* ${currentItem.name}\n`;
+      msg += `*Quantity:* ${currentQty}\n`;
+      msg += `*Total Amount:* Rs. ${total}\n`;
+      msg += `*Customer Name:* ${name}\n`;
+      if (note) {
+        msg += `*Note:* ${note}\n`;
+      }
+      msg += `------------------------------\n`;
+      msg += `Please send the account credentials (Email, Password, Recovery & 2FA codes).`;
+
+      const encoded = encodeURIComponent(msg);
+      window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, '_blank');
+      closeOrderModal();
+    }
+
+    // Check logged in user session on load to update navbar
+    window.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('nav-actions-container');
+      try {
+        const raw = localStorage.getItem('account_dukan_current_user');
+        if (raw) {
+          const user = JSON.parse(raw);
+          if (user && user.name) {
+            container.innerHTML = `
+              <div class="user-greeting">
+                <i class="fa-solid fa-circle-user"></i>
+                <span>${user.name.split(' ')[0]}</span>
+              </div>
+              <button onclick="handleLogout()" class="btn btn-login" style="padding: 6px 12px; font-size: 0.8rem;">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout
+              </button>
+            `;
+          }
+        }
+      } catch (err) {}
+    });
+
+    function handleLogout() {
+      localStorage.removeItem('account_dukan_current_user');
+      window.location.reload();
+    }
+
+    // Close modal on outside click
+    document.getElementById('orderModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeOrderModal();
+      }
+    });
+  </script>
+</body>
+</html>
